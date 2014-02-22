@@ -315,6 +315,7 @@ module.exports = function(grunt) {
 					name : '<%= pkg.name %>',
 					version : '<%= pkg.version %>',
 					homepage : '<%= pkg.homepage %>',
+					production : '<%= pkg.production %>',
 					now : '<%= now %>',
 					ver : '<%= ver %>',
 					

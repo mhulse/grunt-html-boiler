@@ -9,7 +9,6 @@
 	
 	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
 	<meta name="description" content="<!--@echo description-->">
-	<meta name="keywords" content="">
 	
 	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 	
@@ -20,7 +19,7 @@
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
-	<link rel="stylesheet" href="http://picard.mky.io/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
+	<link rel="stylesheet" href="<!-- @echo production --><!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
 	
 	<!-- @endif -->
 	
@@ -81,7 +80,7 @@
 	
 	<!-- @if NODE_ENV == 'PRODUCTION' -->
 	
-	<script src="http://picard.mky.io/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	<script src="<!-- @echo production --><!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
 	
 	<!-- @endif -->
 	
