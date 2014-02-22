@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width">
+	
+	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
+	<meta name="description" content="<!--@echo description-->">
+	<meta name="keywords" content="">
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<link rel="stylesheet" href="./css/<!-- @echo name -->.css">
+	<link rel="stylesheet" href="./css/development.css">
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<link rel="stylesheet" href="http://picard.mky.io/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/css/<!-- @echo name -->.min.css">
+	
+	<!-- @endif -->
+	
+</head>
+<body>
+	
+	<header role="banner">
+		
+		<h1><a href="<!-- @echo homepage -->"><!--@echo title-->: <!--@echo description--></a></h1>
+		
+	</header>
+	
+	<main role="main">
+		
+		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+		
+		<p>This will only show for development.</p>
+		
+		<!-- @endif -->
+		
+		<section>
+			
+			<h1>Hello world!</h1>
+			
+		</section>
+		
+	</main>
+	
+	<hr>
+	
+	<footer role="contentinfo">
+		
+		<p><a href="<!-- @echo homepage -->">Fork this shizzle</a> on <a href="https://github.com/">GitHub-izzle</a>.</p>
+		
+	</footer>
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<script src="./scripts/jquery.js"></script>
+	<script src="./scripts/fastclick.js"></script>
+	<script src="./scripts/ghtmlb.js"></script>
+	<script src="./scripts/ghtmlb.mod.fastclick.js"></script>
+	<script src="./scripts/ghtmlb.mod.twitter.js"></script>
+	<script src="./scripts/ghtmlb.mod.test.js"></script>
+	<script src="./scripts/ghtmlb.init.js"></script>
+	
+	<script>
+		
+		$(document).ready(function() {});
+		
+		$(window).load(function() {});
+		
+		$(window).resize(function() {});
+		
+	</script>
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<script src="http://picard.mky.io/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
+	
+	<!-- @endif -->
+	
+</body>
+</html>
+

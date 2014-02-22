@@ -1,0 +1,29 @@
+{
+  "title": "Grunt HTML Boiler",
+  "name": "grunt-html-boiler",
+  "description": "A starting point for Grunt.js HTML projects/repositories.",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mhulse/grunt-html-boiler",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mhulse/grunt-html-boiler.git"
+  },
+  "author": {
+    "name": "Micky Hulse",
+    "url": "http://mky.io"
+  },
+  "dependencies": {
+    "grunt": "0.4.2",
+    "grunt-bower-task": "0.3.4",
+    "grunt-contrib-clean": "0.5.0",
+    "grunt-contrib-concat": "0.3.0",
+    "grunt-contrib-copy": "0.5.0",
+    "grunt-contrib-jshint": "0.8.0",
+    "grunt-contrib-sass": "0.7.2",
+    "grunt-contrib-uglify": "0.3.2",
+    "grunt-contrib-watch": "0.5.3",
+    "grunt-env": "0.4.0",
+    "grunt-preprocess": "4.0.0"
+  },
+  "devDependencies": {}
+}

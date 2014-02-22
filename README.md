@@ -10,6 +10,30 @@
 
 More information coming soon.
 
+## Usage
+
+## Builds
+
+Navigate to the local repo's `source/` folder:
+
+```bash
+$ cd grunt-html-boiler/source/
+```
+
+Install dependencies:
+
+```bash
+$ npm install
+```
+
+Install [Bower](http://bower.io/) plugins:
+
+```bash
+$ grunt bower
+```
+
+
+
 ## Links
 
 * [Have Grunt generate `index.html` for different setups](http://stackoverflow.com/a/14970339/922323)
