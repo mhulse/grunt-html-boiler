@@ -10,7 +10,16 @@
 
 More information coming soon.
 
+## Demo
+
+DEVELOPMENT | PRODUCTION
+:-: | :-:
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mky.io/grunt-html-boiler/dev/&chs=240x240)](http://mky.io/grunt-html-boiler/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mky.io/grunt-html-boiler/prod/&chs=240x240)](http://mky.io/grunt-html-boiler/prod/)
+`$ grunt` | `$ grunt prod`
+
 ## Usage
+
+More information coming soon.
 
 ## Builds
 
