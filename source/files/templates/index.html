@@ -34,15 +34,21 @@
 	
 	<main role="main">
 		
-		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-		
-		<p>This will only show for development.</p>
-		
-		<!-- @endif -->
-		
 		<section>
 			
-			<h1>Hello world!</h1>
+			<h1><!--@echo NODE_ENV--></h1>
+			
+			<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+			
+			<img src="./images/junk/test.gif">
+			
+			<!-- @endif -->
+			
+			<!-- @if NODE_ENV == 'PRODUCTION' -->
+			
+			<img src="<!-- @echo production --><!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/images/grunt-logo.svg">
+			
+			<!-- @endif -->
 			
 		</section>
 		
