@@ -39,4 +39,4 @@
 		
 	};
 	
-}(window.WWPD = window.WWPD || {})); // Use existing namespace or make a new object of that namespace.
+}(window.GHTMLB = window.GHTMLB || {})); // Use existing namespace or make a new object of that namespace.

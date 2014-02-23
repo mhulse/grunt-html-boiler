@@ -6,6 +6,6 @@ $(document).ready(function() {
 	 * Execute modules.
 	 */
 	
-	WWPD.init();
+	GHTMLB.init();
 	
 });

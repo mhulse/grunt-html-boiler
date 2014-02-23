@@ -417,6 +417,7 @@ body {
   color: black;
   background: white;
   min-height: 100%;
+  padding: 20px;
   text-rendering: optimizeLegibility;
 }
 
@@ -431,7 +432,7 @@ a:visited:hover, a:focus, a:focus:hover, a:hover, a:active {
 
 img {
   display: block;
-  margin: 0 auto;
+  margin: 25px auto;
 }
 
 ::-moz-selection {
@@ -450,4 +451,9 @@ img {
   font-style: italic;
   font-font-weight: bold;
   color: #666666;
+}
+
+iframe[id^='twitter-widget-'],
+.twitter-timeline {
+  width: 100%;
 }

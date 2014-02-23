@@ -143,7 +143,7 @@ module.exports = function(grunt) {
 			init : [
 				
 				'./Gruntfile.js',
-				'./files/scripts/wwpd.*.js',
+				'./files/scripts/<%= pkg.ns %>.*.js',
 				
 			],
 			
@@ -228,9 +228,9 @@ module.exports = function(grunt) {
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
-						'./files/scripts/wwpd.js',
-						'./files/scripts/wwpd.mod.*.js',
-						'./files/scripts/wwpd.init.js'
+						'./files/scripts/<%= pkg.ns %>.js',
+						'./files/scripts/<%= pkg.ns %>.mod.*.js',
+						'./files/scripts/<%= pkg.ns %>.init.js'
 					],
 					
 				}

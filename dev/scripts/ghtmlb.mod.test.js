@@ -1,7 +1,7 @@
-WWPD.register(function() {
+GHTMLB.register(function() {
 	
 	'use strict';
 	
 	console.log('Hello world!');
 	
-}); // WWPD?
+}); // GHTMLB?

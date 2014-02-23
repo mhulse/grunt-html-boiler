@@ -1,6 +1,6 @@
 /* jshint -W062, expr:true */
 
-WWPD.register(function() {
+GHTMLB.register(function() {
 	
 	'use strict';
 	
@@ -18,4 +18,4 @@ WWPD.register(function() {
 		
 	}('twitter-wjs');
 	
-}); // WWPD?
+}); // GHTMLB

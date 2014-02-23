@@ -10,6 +10,7 @@ body {
 	color: $raven;
 	background: $milk;
 	min-height: 100%;
+	padding: 20px;
 	text-rendering: optimizeLegibility;
 }
 
@@ -33,7 +34,7 @@ a {
 
 img {
 	display: block;
-	margin: 0 auto;
+	margin: 25px auto;
 }
 
 ::-moz-selection {
