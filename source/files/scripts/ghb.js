@@ -39,4 +39,4 @@
 		
 	};
 	
-}(window.GHTMLB = window.GHTMLB || {})); // Use existing namespace or make a new object of that namespace.
+}(window.GHB = window.GHB || {})); // Use existing namespace or make a new object of that namespace.

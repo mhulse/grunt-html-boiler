@@ -1,6 +1,6 @@
 /* jshint -W062, expr:true */
 
-GHTMLB.register(function() {
+GHB.register(function() {
 	
 	'use strict';
 	
@@ -18,4 +18,4 @@ GHTMLB.register(function() {
 		
 	}('twitter-wjs');
 	
-}); // GHTMLB
+}); // GHB

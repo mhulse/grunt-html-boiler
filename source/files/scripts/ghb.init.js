@@ -6,6 +6,6 @@ $(document).ready(function() {
 	 * Execute modules.
 	 */
 	
-	GHTMLB.init();
+	GHB.init();
 	
 });

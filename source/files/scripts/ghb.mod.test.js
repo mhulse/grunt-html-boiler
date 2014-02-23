@@ -1,7 +1,7 @@
-GHTMLB.register(function() {
+GHB.register(function() {
 	
 	'use strict';
 	
 	console.log('Hello world!');
 	
-}); // GHTMLB?
+}); // GHB?

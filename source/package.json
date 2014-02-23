@@ -1,7 +1,6 @@
 {
   "title": "Grunt HTML Boiler",
   "name": "grunt-html-boiler",
-  "ns": "GHTMLB",
   "description": "A starting point for Grunt.js HTML projects/repositories.",
   "version": "1.0.0",
   "homepage": "https://github.com/mhulse/grunt-html-boiler",
