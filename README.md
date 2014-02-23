@@ -10,6 +10,12 @@
 
 This repo is just an example of my prefered Grunt-powered asset/theme files workflow.
 
+It's my preference to separate my asset/theme files from my server-side code/templates. A few advantages to this type of setup is:
+
+1. Updating my theme becomes as simple changing one variable ([see below](#update-production-theme)).
+1. I can build and commit my theme files separately from my server-side logic/templates.
+1. Other?
+
 This repo also serves as an example of how one can use Grunt to build a "development" and "production" `index.html`, and other, file(s).
 
 ## Demo
@@ -31,11 +37,13 @@ Here's a few ways to install this code:
 
 ## Usage
 
+Assuming you already have [Grunt.js](http://gruntjs.com/) installed ...
+
 Modify `/source/package.json` to meet the needs of your repo/project.
 
 **Note:** The `production` key's value is the URI where the final production files will live.
 
-## Builds
+### Setup dependencies:
 
 Navigate to the local repo's `source/` folder:
 
@@ -43,7 +51,7 @@ Navigate to the local repo's `source/` folder:
 $ cd grunt-html-boiler/source/
 ```
 
-Install dependencies:
+Install Grunt tasks:
 
 ```bash
 $ npm install
@@ -60,10 +68,12 @@ This will install a few files into the `/source/files/plugins` folder.
 In order to keep things tidy, I've symlinked these plugins:
 
 Plugin | Destination
-:-: | :-:
+:-- | :--
 `/source/plugins/fastclick/fastclick.js` | `/source/scripts/fastclick.js`
 `/source/plugins/jquery/jquery.js` | `/source/scripts/jquery.js`
 `/source/plugins/normalize-css/normalize.css` | `/source/styles/partials/_normalize.scss`
+
+### Development preview:
 
 Test the development build:
 
@@ -76,7 +86,9 @@ Visit the development build:
 
 <http://localhost/grunt-html-boiler/dev/>
 
-**Note:** The above URL will depend upon your local development environment; for previewing my projects, I personally use [XAMPP](http://www.apachefriends.org/index.html).
+**Note:** The above URL will depend upon your local development environment; for previewing my projects I use [XAMPP](http://www.apachefriends.org/index.html).
+
+### Edit:
 
 At this point, you can modify any of the files, especially the ones found in the `/source/files` folder.
 
@@ -96,21 +108,25 @@ $ grunt watch
 /source/files/templates/**/*
 ```
 
+### Production build:
+
 Once you're ready to do a production build, run:
 
 ```bash
 $ grunt prod
 ```
 
-Push the productin build to your GitHub repo.
+Push the production build to your GitHub repo.
 
 Depending on your setup, you may need to pull the latest build to your production server.
 
-Visit the production build:
+Visit the production build locally:
 
 <http://localhost/grunt-html-boiler/prod/>
 
-**Note:** The production build's asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing your latest production build.
+**Note:** The production build's asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing the production's HTML file and related assets.
+
+### Update production theme:
 
 Finally, in a real world scenario, you would update the asset path by updating the URL to your latest production build. For example, here's a simple PHP function one could use in a WordPress `functions.php` file:
 
