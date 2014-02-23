@@ -112,7 +112,6 @@ module.exports = function(grunt) {
 			files : [
 				
 				'<%= jshint.init %>',
-				'./files/feeds/**/*',
 				'./files/scripts/**/*',
 				'./files/styles/**/*',
 				'./files/templates/**/*',
