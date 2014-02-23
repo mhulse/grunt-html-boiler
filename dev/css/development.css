@@ -11,3 +11,11 @@
  */
 
 
+.foo {
+  font-size: smaller;
+  color: #333333;
+  border: 10px solid #666666;
+  margin: 50px;
+  padding: 100px;
+  display: block;
+}

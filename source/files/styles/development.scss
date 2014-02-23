@@ -1,0 +1,11 @@
+// Picard helpers:
+@import "partials/variables";
+
+.foo {
+	font-size: smaller;
+	color: $gray3;
+	border: 10px solid $gray6;
+	margin: 50px;
+	padding: 100px;
+	display: block;
+}
