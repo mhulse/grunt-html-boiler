@@ -8,7 +8,7 @@
 
 ## About
 
-This repo is just an example of my prefered asset Grunt workflow.
+This repo is just an example of my prefered Grunt-powered asset/theme files workflow.
 
 This repo also serves as an example of how one can use Grunt to build a "development" and "production" `index.html`, and other, file(s).
 
@@ -74,7 +74,7 @@ $ grunt
 
 Visit the development build:
 
-http://localhost/grunt-html-boiler/dev/
+<http://localhost/grunt-html-boiler/dev/>
 
 **Note:** The above URL will depend upon your local development environment; for previewing my projects, I personally use [XAMPP](http://www.apachefriends.org/index.html).
 
@@ -105,6 +105,35 @@ $ grunt prod
 Push the productin build to your GitHub repo.
 
 Depending on your setup, you may need to pull the latest build to your production server.
+
+Visit the production build:
+
+<http://localhost/grunt-html-boiler/prod/>
+
+**Note:** The production build's asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing your latest production build.
+
+Finally, in a real world scenario, you would update the asset path by updating the URL to your latest production build. For example, here's a simple PHP function one could use in a WordPress `functions.php` file:
+
+```php
+/**
+ * Theme build version.
+ *
+ * Called like so: <?=theme_build()?>
+ */
+
+function theme_build() {
+	
+	return '/prod/1.0.0/20140222/1'; // Edit this string to update theme across site.
+	
+}
+```
+
+And on the template level:
+
+```html
+<link rel="stylesheet" href="http://static.foo.com<?=theme_build()?>/css/grunt-html-boiler.min.css">
+<script src="http://static.foo.com<?=theme_build()?>/js/grunt-html-boiler.min.js"></script>
+```
 
 ## Links
 
