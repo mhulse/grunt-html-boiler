@@ -12,7 +12,7 @@
     "name": "Micky Hulse",
     "url": "http://mky.io"
   },
-  "production": "http://mky.io/grunt-html-boiler/prod/",
+  "production": "http://mky.io/grunt-html-boiler/prod",
   "dependencies": {
     "grunt": "0.4.2",
     "grunt-bower-task": "0.3.4",
