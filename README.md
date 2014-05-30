@@ -151,6 +151,14 @@ And on the template level:
 <script src="http://static.foo.com<?=theme_build()?>/js/grunt-html-boiler.min.js"></script>
 ```
 
+## Notes
+
+## Notes
+
+1. This project generates two groups of Grunt-built files: 1) Un-minified/uglified, and 2) minified/uglified. I prefer having my development- and production-generated files separately built.
+
+1. This project puts the "build" code, or "source", a level deep off the root. In my opinion, having the source files off the root and in a sub-folder allows for the overall setup to be more organized and streamlined.
+
 ## Links
 
 * [Have Grunt generate `index.html` for different setups](http://stackoverflow.com/a/14970339/922323)
@@ -168,7 +176,7 @@ Please read the [CONTRIBUTING.md](https://github.com/user/grunt-html-boiler/blob
 
 #### LEGAL
 
-Copyright &copy; 2014 [Micky Hulse](http://mky.io)
+Copyright © 2014 [Micky Hulse](http://mky.io)
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
