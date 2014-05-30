@@ -153,8 +153,6 @@ And on the template level:
 
 ## Notes
 
-## Notes
-
 1. This project generates two groups of Grunt-built files: 1) Un-minified/uglified, and 2) minified/uglified. I prefer having my development- and production-generated files separately built.
 
 1. This project puts the "build" code, or "source", a level deep off the root. In my opinion, having the source files off the root and in a sub-folder allows for the overall setup to be more organized and streamlined.
