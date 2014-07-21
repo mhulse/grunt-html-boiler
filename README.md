@@ -29,7 +29,7 @@ DEVELOPMENT | PRODUCTION
 
 Assuming you already have [Grunt.js](http://gruntjs.com/) installed …
 
-**Note:** The Grunt [command line interface](https://github.com/gruntjs/grunt-cli) is installed locally, so you can skip `$ npm install -g grunt-cli` if you use the `$ npm run` commands.
+**Note:** The Grunt [command line interface](https://github.com/gruntjs/grunt-cli) gets installed locally, so you can skip `$ npm install -g grunt-cli` if you use the `$ npm run` commands.
 
 ### Installation:
 
