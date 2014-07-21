@@ -1,10 +1,9 @@
 {
-  "name": "simple-bower",
-  "version": "0.0.0",
+  "name": "bower",
   "dependencies": {
-    "jquery": "2.1.0",
-    "fastclick": "0.6.12",
-    "normalize-css": "3.0.0"
+    "jquery": "~2",
+    "fastclick": "~1",
+    "normalize-css": "~3"
   },
   "exportsOverride": {
     "jquery": {
