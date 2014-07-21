@@ -171,6 +171,13 @@ function theme_build() {
 * [Have Grunt generate `index.html` for different setups](http://stackoverflow.com/a/14970339/922323)
 * [grunt-js-boiler](https://github.com/mhulse/grunt-js-boiler)
 
+### Real-world:
+
+Projects that used `grunt-html-boiler` as a starting point:
+
+* [Drone](https://github.com/registerguard/drone)
+* [Zeppelin](https://github.com/registerguard/zeppelin)
+
 ## Contributing
 
 Please read the [CONTRIBUTING.md](https://github.com/user/grunt-html-boiler/blob/branch/CONTRIBUTING.md).
