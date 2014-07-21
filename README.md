@@ -8,11 +8,10 @@
 
 This repo is just an example of my prefered Grunt-powered asset/theme files workflow.
 
-It’s my preference to separate my asset/theme files from my server-side code/templates. A few advantages to this type of setup is:
+It’s my preference to separate asset/theme files from server-side code/templates. A few advantages to this type of setup is:
 
 1. Updating theme becomes as simple as changing one variable ([see below](#update-production-theme)).
 1. Build and commit theme files separately from server-side logic/templates.
-1. Other?
 
 This repo also serves as an example of how one can use Grunt (via [`grunt-env`](https://github.com/jsoverson/grunt-env/) and [`grunt-preprocess`](https://github.com/jsoverson/grunt-preprocess/) tasks) to build a “development” and “production” `index.html`, and other, file(s).
 
