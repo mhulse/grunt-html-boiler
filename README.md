@@ -99,7 +99,7 @@ Modify `/source/package.json` to meet the needs of your repo/project.
 
 To make life easier while developing, run:
 
-```
+```bash
 $ grunt watch
 # … or:
 $ npm run watch
