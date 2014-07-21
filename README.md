@@ -4,8 +4,6 @@
 
 **Grunt HTML Boiler: A starting point for [Grunt.js](http://gruntjs.com/) HTML projects/repositories.**
 
----
-
 ## About
 
 This repo is just an example of my prefered Grunt-powered asset/theme files workflow.
