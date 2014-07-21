@@ -2,7 +2,7 @@
 
 <a href="http://gruntjs.com/" title="Built with Grunt"><img src="https://cdn.gruntjs.com/builtwith.png" alt="Built with Grunt" align="right"></a>
 
-**Grunt HTML Boiler: A starting point for [Grunt.js](http://gruntjs.com/) HTML projects/repositories.**
+**A starting point for [Grunt.js](http://gruntjs.com/) HTML projects/repositories.**
 
 ## About
 
