@@ -41,7 +41,7 @@ Here’s a few ways to install this code:
 
 ### Setup dependencies:
 
-Navigate to the local repo’s `source/` folder:
+Navigate to the local repo’s `source/` directory:
 
 ```bash
 $ cd grunt-html-boiler/source/
@@ -53,7 +53,7 @@ Install Grunt tasks:
 $ npm install
 ```
 
-Install [Bower](http://bower.io/) plugins:
+Optionally, install the latest [Bower](http://bower.io/) plugin versions:
 
 ```bash
 $ grunt bower
@@ -61,15 +61,13 @@ $ grunt bower
 $ npm run bower
 ```
 
-… this will install plugins into the `/source/files/plugins` folder.
-
-In order to keep things tidy, I’ve setup these symlinks:
+… this will install plugins (as defined in `source/bower.json`) into the `source/files/plugins/` directory; in order to keep things tidy, I’ve created these symlinks:
 
 Plugin | Destination
 :-- | :--
-`/source/plugins/fastclick/fastclick.js` | `/source/scripts/fastclick.js`
-`/source/plugins/jquery/jquery.js` | `/source/scripts/jquery.js`
-`/source/plugins/normalize-css/normalize.css` | `/source/styles/partials/_normalize.scss`
+`source/plugins/fastclick/fastclick.js` | `source/scripts/fastclick.js`
+`source/plugins/jquery/jquery.js` | `source/scripts/jquery.js`
+`source/plugins/normalize-css/normalize.css` | `source/styles/partials/_normalize.scss`
 
 ### Development preview:
 
@@ -91,9 +89,9 @@ Visit the development build:
 
 ### Edit:
 
-At this point, you can modify any of the files, especially the ones found in the `/source/files` folder.
+At this point, you can modify any of the files, especially the ones found in the `source/files/` directory.
 
-Modify `/source/package.json` to meet the needs of your repo/project.
+Modify `source/package.json` to meet the needs of your repo/project.
 
 **Note:** The `production` key’s value is the URI where the final production files will live.
 
@@ -105,14 +103,14 @@ $ grunt watch
 $ npm run watch
 ```
 
-… the `watch` command will run a development build any time these folders/file(s) change:
+… the `watch` command will run a development build any time these directories/file(s) change:
 
 ```text
-/source/Gruntfile.js
-/source/files/scripts/<%= pkg.ns %>.*.js
-/source/files/scripts/**/*
-/source/files/styles/**/*
-/source/files/templates/**/*
+source/Gruntfile.js
+source/files/scripts/<%= pkg.ns %>.*.js
+source/files/scripts/**/*
+source/files/styles/**/*
+source/files/templates/**/*
 ```
 
 ### Production build:
@@ -164,7 +162,7 @@ function theme_build() {
 
 1. This project generates two groups of Grunt-built files: 1) Un-minified/uglified, and 2) minified/uglified. I prefer having my development- and production-generated files separately built.
 
-1. This project puts the “build” code, or “source”, a level deep off the root. In my opinion, having the source files off the root and in a sub-folder allows for the overall setup to be more organized and streamlined.
+1. This project puts the “build” code, or “source”, a level deep off the root. In my opinion, having the source files off the root and in a sub-directory allows for the overall setup to be more organized and streamlined.
 
 ## Links
 
