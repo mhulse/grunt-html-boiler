@@ -147,7 +147,7 @@ function theme_build() {
 And on the template level:
 
 ```html
-<link rel="stylesheet" href="http://static.foo.com<?=theme_build()?>/css/grunt-html-boiler.min.css">
+<link rel="stylesheet" href="http://static.foo.com<?=theme_build()?>/styles/grunt-html-boiler.min.css">
 <script src="http://static.foo.com<?=theme_build()?>/js/grunt-html-boiler.min.js"></script>
 ```
 
