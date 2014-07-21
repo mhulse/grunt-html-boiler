@@ -10,13 +10,13 @@
 
 This repo is just an example of my prefered Grunt-powered asset/theme files workflow.
 
-It's my preference to separate my asset/theme files from my server-side code/templates. A few advantages to this type of setup is:
+It’s my preference to separate my asset/theme files from my server-side code/templates. A few advantages to this type of setup is:
 
-1. Updating my theme becomes as simple as changing one variable ([see below](#update-production-theme)).
-1. I can build and commit my theme files separately from my server-side logic/templates.
+1. Updating theme becomes as simple as changing one variable ([see below](#update-production-theme)).
+1. Build and commit theme files separately from server-side logic/templates.
 1. Other?
 
-This repo also serves as an example of how one can use Grunt (via [`grunt-env`](https://github.com/jsoverson/grunt-env/) and [`grunt-preprocess`](https://github.com/jsoverson/grunt-preprocess/) tasks) to build a "development" and "production" `index.html`, and other, file(s).
+This repo also serves as an example of how one can use Grunt (via [`grunt-env`](https://github.com/jsoverson/grunt-env/) and [`grunt-preprocess`](https://github.com/jsoverson/grunt-preprocess/) tasks) to build a “development” and “production” `index.html`, and other, file(s).
 
 ## Demo
 
@@ -25,27 +25,25 @@ Click or scan:
 DEVELOPMENT | PRODUCTION
 :-: | :-:
 [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mky.io/grunt-html-boiler/dev/&chs=240x240)](http://mky.io/grunt-html-boiler/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mky.io/grunt-html-boiler/prod/&chs=240x240)](http://mky.io/grunt-html-boiler/prod/)
-`$ grunt` | `$ grunt prod`
+`$ grunt` or `$ npm run dev` | `$ grunt prod` or `$ npm run prod`
 
-## Installation
+## Development
 
-Here's a few ways to install this code:
+Assuming you already have [Grunt.js](http://gruntjs.com/) installed …
+
+**Note:** The Grunt [command line interface](https://github.com/gruntjs/grunt-cli) is installed locally, so you can skip `npm install -g grunt-cli` if you use the `npm run` commands.
+
+### Installation:
+
+Here’s a few ways to install this code:
 
 1. Download as a [`zip`](https://github.com/mhulse/grunt-html-boiler/archive/gh-pages.zip).
 1. Clone it: `$ git clone https://github.com/mhulse/grunt-html-boiler.git`.
 1. Fork it and clone: `$ git clone git@github.com:USERNAME/grunt-html-boiler.git`.
 
-## Usage
-
-Assuming you already have [Grunt.js](http://gruntjs.com/) installed ...
-
-Modify `/source/package.json` to meet the needs of your repo/project.
-
-**Note:** The `production` key's value is the URI where the final production files will live.
-
 ### Setup dependencies:
 
-Navigate to the local repo's `source/` folder:
+Navigate to the local repo’s `source/` folder:
 
 ```bash
 $ cd grunt-html-boiler/source/
@@ -61,11 +59,13 @@ Install [Bower](http://bower.io/) plugins:
 
 ```bash
 $ grunt bower
+# … or:
+$ npm run bower
 ```
 
-This will install a few files into the `/source/files/plugins` folder.
+… this will install plugins into the `/source/files/plugins` folder.
 
-In order to keep things tidy, I've symlinked these plugins:
+In order to keep things tidy, I’ve setup these symlinks:
 
 Plugin | Destination
 :-- | :--
@@ -79,7 +79,10 @@ Test the development build:
 
 ```bash
 $ grunt
-# "grunt dev" would also work.
+# … or:
+$ grunt dev
+# … or:
+$ npm run dev
 ```
 
 Visit the development build:
@@ -92,13 +95,19 @@ Visit the development build:
 
 At this point, you can modify any of the files, especially the ones found in the `/source/files` folder.
 
+Modify `/source/package.json` to meet the needs of your repo/project.
+
+**Note:** The `production` key’s value is the URI where the final production files will live.
+
 To make life easier while developing, run:
 
 ```
 $ grunt watch
+# … or:
+$ npm run watch
 ```
 
-... the watch command will run a development build any time these folders/file(s) change:
+… the watch command will run a development build any time these folders/file(s) change:
 
 ```text
 /source/Gruntfile.js
@@ -110,10 +119,12 @@ $ grunt watch
 
 ### Production build:
 
-Once you're ready to do a production build, run:
+Once you’re ready to do a production build, run:
 
 ```bash
 $ grunt prod
+# … or:
+$ npm run prod
 ```
 
 Push the production build to your GitHub repo.
@@ -124,11 +135,11 @@ Visit the production build locally:
 
 <http://localhost/grunt-html-boiler/prod/>
 
-**Note:** The production build's asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing the production's HTML file and related assets.
+**Note:** The production build’s asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing the production’s HTML file and related assets.
 
 ### Update production theme:
 
-Finally, in a real world scenario, you would update the asset path by updating the URL to your latest production build. For example, here's a simple PHP function one could use in a WordPress `functions.php` file:
+Finally, in a real world scenario, you would update the asset path by updating the URL to your latest production build. For example, here’s a simple PHP function one could use in a WordPress `functions.php` file:
 
 ```php
 /**
@@ -138,13 +149,13 @@ Finally, in a real world scenario, you would update the asset path by updating t
  */
 
 function theme_build() {
-	
+
 	return '/prod/1.0.0/20140222/1'; // Edit this string to update theme across site.
-	
+
 }
 ```
 
-And on the template level:
+… and on the template level:
 
 ```html
 <link rel="stylesheet" href="http://static.foo.com<?=theme_build()?>/styles/grunt-html-boiler.min.css">
@@ -155,7 +166,7 @@ And on the template level:
 
 1. This project generates two groups of Grunt-built files: 1) Un-minified/uglified, and 2) minified/uglified. I prefer having my development- and production-generated files separately built.
 
-1. This project puts the "build" code, or "source", a level deep off the root. In my opinion, having the source files off the root and in a sub-folder allows for the overall setup to be more organized and streamlined.
+1. This project puts the “build” code, or “source”, a level deep off the root. In my opinion, having the source files off the root and in a sub-folder allows for the overall setup to be more organized and streamlined.
 
 ## Links
 
@@ -176,10 +187,10 @@ Please read the [CONTRIBUTING.md](https://github.com/user/grunt-html-boiler/blob
 
 Copyright © 2014 [Micky Hulse](http://mky.io)
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
+Licensed under the Apache License, Version 2.0 (the “License”); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
 [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an ”AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
 <img width="20" height="20" align="absmiddle" src="https://github.global.ssl.fastly.net/images/icons/emoji/octocat.png" alt=":octocat:" title=":octocat:" class="emoji">
