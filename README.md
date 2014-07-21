@@ -133,7 +133,7 @@ Visit the production build locally:
 
 <http://localhost/grunt-html-boiler/prod/>
 
-**Note:** The production build’s asset files are absolutely linked to the production server; hence the need to get the latest files there before previewing the production’s HTML file and related assets.
+**Note:** The production build’s asset files are absolutely linked to the production server; hence the need to push the latest files there before previewing the production’s HTML file and related assets.
 
 ### Update production theme:
 
