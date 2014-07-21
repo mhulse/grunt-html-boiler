@@ -13,6 +13,12 @@
     "url": "http://mky.io"
   },
   "production": "http://mky.io/grunt-html-boiler/prod",
+  "licenses": [
+    {
+      "type": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "dependencies": {
     "grunt": "~0",
     "grunt-cli": "~0",
