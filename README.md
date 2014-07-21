@@ -105,7 +105,7 @@ $ grunt watch
 $ npm run watch
 ```
 
-… the watch command will run a development build any time these folders/file(s) change:
+… the `watch` command will run a development build any time these folders/file(s) change:
 
 ```text
 /source/Gruntfile.js
