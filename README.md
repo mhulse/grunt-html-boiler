@@ -21,7 +21,7 @@ Click or scan:
 
 DEVELOPMENT | PRODUCTION
 :-: | :-:
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mky.io/grunt-html-boiler/dev/&chs=240x240)](http://mky.io/grunt-html-boiler/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mky.io/grunt-html-boiler/prod/&chs=240x240)](http://mky.io/grunt-html-boiler/prod/)
+[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/grunt-html-boiler/dev/&chs=240x240)](http://mhulse.github.io/grunt-html-boiler/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/grunt-html-boiler/prod/&chs=240x240)](http://mhulse.github.io/grunt-html-boiler/prod/)
 `$ grunt` or `$ npm run dev` | `$ grunt prod` or `$ npm run prod`
 
 ## Development
