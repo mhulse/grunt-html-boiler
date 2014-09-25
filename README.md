@@ -134,7 +134,7 @@ Visit the production build locally:
 
 ### Update production theme:
 
-Finally, in a real world scenario, you would update the asset path by updating the URL to your latest production build. For example, here’s a simple PHP function one could use in a WordPress `functions.php` file:
+Finally, in a real world scenario, you would update the asset path (on your live templates) by updating the URL to the latest production build. For example, here’s a simple PHP function one could use in a WordPress `functions.php` file:
 
 ```php
 /**
