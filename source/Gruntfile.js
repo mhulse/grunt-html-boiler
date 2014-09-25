@@ -142,7 +142,7 @@ module.exports = function(grunt) {
 			init : [
 				
 				'./Gruntfile.js',
-				'./files/scripts/ghb.*.js',
+				'./files/scripts/<%= pkg.name %>.*.js',
 				
 			],
 			
@@ -227,9 +227,9 @@ module.exports = function(grunt) {
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
-						'./files/scripts/ghb.js',
-						'./files/scripts/ghb.mod.*.js',
-						'./files/scripts/ghb.init.js'
+						'./files/scripts/<%= pkg.name %>.js',
+						'./files/scripts/<%= pkg.name %>.mod.*.js',
+						'./files/scripts/<%= pkg.name %>.init.js'
 					],
 					
 				}
