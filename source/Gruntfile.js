@@ -229,12 +229,12 @@ module.exports = function(grunt) {
 						'./files/scripts/jquery.*.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
-						'./files/scripts/<%= pkg.name %>.init.js'
+						'./files/scripts/<%= pkg.name %>.init.js',
 					],
 					
-				}
+				},
 				
-			}
+			},
 			
 		},
 		
@@ -251,8 +251,8 @@ module.exports = function(grunt) {
 			
 			options : {
 				
-				precision : 14,     // How many digits of precision to use when outputting decimal numbers.
-				noCache: true,      // Don't cache to sassc files.
+				precision : 14, // How many digits of precision to use when outputting decimal numbers.
+				noCache: true,  // Don't cache to sassc files.
 				
 			},
 			
@@ -325,7 +325,7 @@ module.exports = function(grunt) {
 			dev : {
 				
 				src : './files/templates/index.html',
-				dest : '../dev/index.html'
+				dest : '../dev/index.html',
 				
 			},
 			
@@ -334,7 +334,7 @@ module.exports = function(grunt) {
 				files : {
 					
 					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html' : './files/templates/index.html',
-					'../prod/index.html' : './files/templates/latest.html'
+					'../prod/index.html' : './files/templates/latest.html',
 					
 				},
 				
@@ -371,9 +371,9 @@ module.exports = function(grunt) {
 				cwd : './files/',
 				src : [
 					'images/**/*',
-					'!images/junk/**'
+					'!images/junk/**',
 				],
-				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
+				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 				
 			},
 			
