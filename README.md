@@ -180,7 +180,7 @@ Personal projects that have used `grunt-html-boiler` as a starting point:
 
 ## Contributing
 
-Please read the [CONTRIBUTING.md](https://github.com/user/grunt-html-boiler/blob/branch/CONTRIBUTING.md).
+Please read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Feedback
 
