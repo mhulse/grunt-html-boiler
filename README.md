@@ -170,10 +170,13 @@ function theme_build() {
 
 ### Real-world:
 
-Projects that used `grunt-html-boiler` as a starting point:
+Personal projects that have used `grunt-html-boiler` as a starting point:
 
 * [Drone](https://github.com/registerguard/drone)
 * [Zeppelin](https://github.com/registerguard/zeppelin)
+* [Purely Packery](https://github.com/mhulse/purely-packery)
+* [Infinitope!](https://github.com/mhulse/infinitope)
+* [Popular](https://github.com/rgpages/popular)
 
 ## Contributing
 
