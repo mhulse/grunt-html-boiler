@@ -12,7 +12,8 @@
     "name": "Micky Hulse",
     "url": "http://mky.io"
   },
-  "production": "http://mky.io/grunt-html-boiler/prod",
+  "//": "The following FQDN is the endpoint for your assets (no trailing slash):",
+  "production": "http://mhulse.github.io/grunt-html-boiler",
   "licenses": [
     {
       "type": "Apache License, Version 2.0",

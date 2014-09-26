@@ -1,119 +1,27 @@
-<!doctype html>
-<html>
+<!-- @include includes/top.html -->
 
-<head>
-	
-	<meta charset="utf-8">
-	
-	<meta name="viewport" content="width=device-width">
-	
-	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
-	<meta name="description" content="<!--@echo description-->">
-	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-	
-	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
-	<link rel="stylesheet" href="./styles/development.css">
-	
-	<!-- @endif -->
-	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<link rel="stylesheet" href="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/styles/<!-- @echo name -->.min.css">
-	
-	<!-- @endif -->
-	
-</head>
-<body>
-	
-	<header role="banner">
-		
-		<h1><a href="<!-- @echo homepage -->"><!--@echo title-->: <!--@echo description--></a></h1>
-		
-	</header>
-	
-	<main role="main">
-		
-		<section>
-			
-			<h1><!--@echo NODE_ENV--></h1>
-			
-			<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-			
-			<img src="./images/junk/test.gif">
-			
-			<!-- @endif -->
-			
-			<!-- @if NODE_ENV == 'PRODUCTION' -->
-			
-			<img src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/images/grunt-logo.svg">
-			
-			<!-- @endif -->
-			
-			<hr>
-			
-			<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-			
-			<p class="foo">This is a <code>.foo</code> test.</p>
-			
-			<!-- @endif -->
-			
-			<p class="test">This is a <code>.test</code> test.</p>
-			
-		</section>
-		
-	</main>
-	
-	<hr>
-	
-	<footer role="contentinfo">
-		
-		<a
-			class="twitter-timeline"
-			href="https://twitter.com/gruntjs"
-			data-widget-id="412449818275901440"
-			data-screen-name="gruntjs"
-			width="100%"
-			height="650px"
-		>
-			Tweets by @gruntjs
-		</a>
-		
-		<hr>
-		
-		<p><a href="<!-- @echo homepage -->">Fork this shizzle</a> on <a href="https://github.com/">GitHub-izzle</a>.</p>
-		
-	</footer>
-	
-	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-	
-	<script src="./scripts/jquery.js"></script>
-	<script src="./scripts/jquery.cookie.js"></script>
-	<script src="./scripts/fastclick.js"></script>
-	<script src="./scripts/ghb.js"></script>
-	<script src="./scripts/ghb.mod.fastclick.js"></script>
-	<script src="./scripts/ghb.mod.twitter.js"></script>
-	<script src="./scripts/ghb.mod.test.js"></script>
-	<script src="./scripts/ghb.init.js"></script>
-	
-	<script>
-		
-		$(document).ready(function() {});
-		
-		$(window).load(function() {});
-		
-		$(window).resize(function() {});
-		
-	</script>
-	
-	<!-- @endif -->
-	
-	<!-- @if NODE_ENV == 'PRODUCTION' -->
-	
-	<script src="<!-- @echo production -->/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/scripts/<!-- @echo name -->.min.js"></script>
-	
-	<!-- @endif -->
-	
-</body>
-</html>
+<h1><!--@echo NODE_ENV--></h1>
 
+<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+<img src="./images/junk/test.gif">
+
+<!-- @endif -->
+
+<!-- @if NODE_ENV == 'PRODUCTION' -->
+
+<img src="<!-- @echo production -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/images/grunt-logo.svg">
+
+<!-- @endif -->
+
+<hr>
+
+<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+
+<p class="foo">This is a <code>.foo</code> test.</p>
+
+<!-- @endif -->
+
+<p class="test">This is a <code>.test</code> test.</p>
+
+<!-- @include includes/bottom.html -->

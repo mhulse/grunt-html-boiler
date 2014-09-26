@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+	
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width">
+	
+	<title><!--@echo title--> | v<!--@echo version--> | <!--@echo NODE_ENV--></title>
+	<meta name="description" content="<!--@echo description-->">
+	
+	<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+	
+	<link rel="stylesheet" href="./styles/<!-- @echo name -->.css">
+	<link rel="stylesheet" href="./styles/development.css">
+	
+	<!-- @endif -->
+	
+	<!-- @if NODE_ENV == 'PRODUCTION' -->
+	
+	<link rel="stylesheet" href="<!-- @echo production -->/prod/<!-- @echo version -->/<!-- @echo now -->/<!-- @echo ver -->/styles/<!-- @echo name -->.min.css">
+	
+	<!-- @endif -->
+	
+</head>
+<body>
+	
+	<header role="banner">
+		
+		<h1><a href="<!-- @echo homepage -->"><!--@echo title-->: <!--@echo description--></a></h1>
+		
+	</header>
+	
+	<main role="main">
+		
+		<section>
