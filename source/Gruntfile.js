@@ -355,25 +355,47 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				expand : true,
-				cwd : './files/',
-				src : [
-					'images/**/*',
-					'scripts/**/*',
+				files : [
+					
+					{
+						
+						expand : true,
+						cwd : './files/',
+						src : [
+							'images/**/*',
+							'scripts/**/*',
+						],
+						dest : '../dev/',
+						
+					},
+					
 				],
-				dest : '../dev/',
 				
 			},
 			
 			prod : {
 				
-				expand : true,
-				cwd : './files/',
-				src : [
-					'images/**/*',
-					'!images/junk/**',
+				files : [
+					
+					{
+						
+						expand : true,
+						cwd : './files/',
+						src : [
+							'images/**/*',
+							'!images/junk/**',
+						],
+						dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						
+					}, {
+						
+						// COPY INDEX TO ROOT:
+						src: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
+						dest: '../index.html',
+						
+					},
+					
 				],
-				dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 				
 			},
 			
