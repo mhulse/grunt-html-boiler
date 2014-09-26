@@ -324,19 +324,45 @@ module.exports = function(grunt) {
 			
 			dev : {
 				
-				src : './files/templates/index.html',
-				dest : '../dev/index.html',
+				files: [
+					
+					{
+						
+						expand : true,
+						cwd : './files/templates/',
+						src : [
+							'**/*.*', // Greedy!
+							'!latest.html',
+						],
+						dest : '../dev/',
+						
+					},
+					
+				],
 				
 			},
 			
 			prod : {
 				
-				files : {
+				files: [
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html' : './files/templates/index.html',
-					'../prod/index.html' : './files/templates/latest.html',
+					{
+						
+						expand : true,
+						cwd : './files/templates/',
+						src : [
+							'index.html',
+						],
+						dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						
+					}, {
+						
+						src : './files/templates/latest.html',
+						dest : '../prod/index.html',
+						
+					},
 					
-				},
+				],
 				
 			},
 			
