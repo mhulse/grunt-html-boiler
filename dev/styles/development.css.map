@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,IAAK;EACJ,SAAS,EAAE,OAAO;EAClB,KAAK,ECaE,IAAI;EDZX,MAAM,EAAE,eAAiB;EACzB,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,KAAK;EACd,OAAO,EAAE,KAAK",
-"sources": ["../../source/files/styles/development.scss","../../source/files/styles/partials/_variables.scss"],
-"names": [],
-"file": "development.css"
-}
