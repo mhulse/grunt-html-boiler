@@ -30,7 +30,7 @@ Assuming you already have [Grunt.js](http://gruntjs.com/) installed …
 
 **Note:** The Grunt [command line interface](https://github.com/gruntjs/grunt-cli) gets installed locally, so you can skip `$ npm install -g grunt-cli` if you use the `$ npm run` commands.
 
-### Installation:
+### Installation
 
 Here’s a few ways to install this code:
 
@@ -38,7 +38,7 @@ Here’s a few ways to install this code:
 1. Clone it: `$ git clone https://github.com/mhulse/grunt-html-boiler.git`.
 1. Fork it and clone: `$ git clone git@github.com:USERNAME/grunt-html-boiler.git`.
 
-### Setup dependencies:
+### Setup dependencies
 
 Navigate to the local repo’s `source/` directory:
 
@@ -68,7 +68,7 @@ Plugin | Destination
 `source/plugins/jquery/jquery.js` | `source/scripts/jquery.js`
 `source/plugins/normalize-css/normalize.css` | `source/styles/partials/_normalize.scss`
 
-### Development preview:
+### Development preview
 
 Test the development build:
 
@@ -86,7 +86,7 @@ Visit the development build:
 
 **Note:** The above URL will depend upon your local development environment; for previewing my projects I use [XAMPP](http://www.apachefriends.org/index.html).
 
-### Edit:
+### Edit
 
 At this point, you can modify any of the files, especially the ones found in the `source/files/` directory.
 
@@ -112,7 +112,7 @@ source/files/styles/**/*
 source/files/templates/**/*
 ```
 
-### Production build:
+### Production build
 
 Once you’re ready to do a production build, run:
 
@@ -132,7 +132,7 @@ Visit the production build locally:
 
 **Note:** The production build’s asset files are absolutely linked to the production server; hence the need to push the latest files there before previewing the production’s HTML file and related assets.
 
-### Update production theme:
+### Update production theme
 
 Finally, in a real world scenario, you would update the asset path (on your live templates) by updating the URL to the latest production build. For example, here’s a simple PHP function one could use in a WordPress `functions.php` file:
 
@@ -144,9 +144,9 @@ Finally, in a real world scenario, you would update the asset path (on your live
  */
 
 function theme_build() {
-
+	
 	return '/prod/1.0.0/20140222/1'; // Edit this string to update theme across site.
-
+	
 }
 ```
 
@@ -168,15 +168,20 @@ function theme_build() {
 * [Have Grunt generate `index.html` for different setups](http://stackoverflow.com/a/14970339/922323)
 * [grunt-js-boiler](https://github.com/mhulse/grunt-js-boiler)
 
-### Real-world:
+### Real-world
 
 Personal projects that have used `grunt-html-boiler` as a starting point:
 
+* [2014 General Election](https://github.com/mhulse/election-2014-general)
 * [Drone](https://github.com/registerguard/drone)
 * [Zeppelin](https://github.com/registerguard/zeppelin)
 * [Purely Packery](https://github.com/mhulse/purely-packery)
 * [Infinitope!](https://github.com/mhulse/infinitope)
 * [Popular](https://github.com/rgpages/popular)
+
+## Build instructions?
+
+… and other development notes, can be found [here](build/README.md).
 
 ## Contributing
 
