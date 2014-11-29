@@ -231,7 +231,6 @@ module.exports = function(grunt) {
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
 						'./files/scripts/<%= pkg.name %>.init.js',
-						'./files/scripts/development.js', // Bypass jshint, for quick and dirty JS tests.
 					],
 					
 					// Optionally, add more generated files here ...
