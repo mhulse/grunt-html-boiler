@@ -23,7 +23,7 @@ module.exports = function(grunt) {
 		 * @see http://stackoverflow.com/a/10065754/922323
 		 */
 		
-		pkg : grunt.file.readJSON('package.json'),
+		pkg: grunt.file.readJSON('package.json'),
 		
 		/*----------------------------------( BANNERS )----------------------------------*/
 		
@@ -33,16 +33,16 @@ module.exports = function(grunt) {
 		 * @see http://gruntjs.com/getting-started#an-example-gruntfile
 		 */
 		
-		banner : {
+		banner: {
 			
-			'short' : '/*! ' +
+			'short': '/*! ' +
 			          '<%= pkg.title || pkg.name %>' +
 			          '<%= pkg.version ? " v" + pkg.version : "" %>' +
 			          '<%= pkg.licenses ? " | " + _.pluck(pkg.licenses, "type").join(", ") : "" %>' +
 			          '<%= pkg.homepage ? " | " + pkg.homepage : "" %>' +
 			          ' */',
 			
-			'long' : '/**\n' +
+			'long': '/**\n' +
 			         ' * <%= pkg.title || pkg.name %>\n' +
 			         '<%= pkg.description ? " * " + pkg.description + "\\n" : "" %>' +
 			         ' *\n' +
@@ -66,9 +66,9 @@ module.exports = function(grunt) {
 		 * @see http://blog.stevenlevithan.com/archives/date-time-format
 		 */
 		
-		now : grunt.template.today('yyyymmdd'), // Alternative: yyyymmddhhMMss
+		now: grunt.template.today('yyyymmdd'), // Alternative: yyyymmddhhMMss
 		
-		ver : 1, // Increment if more than one build is needed in a single day.
+		ver: 1, // Increment if more than one build is needed in a single day.
 		
 		/*----------------------------------( BOWER )----------------------------------*/
 		
@@ -81,16 +81,16 @@ module.exports = function(grunt) {
 		 * @see http://bower.io/
 		 */
 		
-		bower : {
+		bower: {
 			
-			install : {
+			install: {
 				
-				options : {
+				options: {
 					
-					targetDir : './files/plugins', // A directory where you want to keep your Bower packages.
-					cleanup : true,                // Will clean target and bower directories.
-					layout : 'byComponent',        // Folder structure type.
-					verbose : true,                // Debug output.
+					targetDir: './files/plugins', // A directory where you want to keep your Bower packages.
+					cleanup: true,                // Will clean target and bower directories.
+					layout: 'byComponent',        // Folder structure type.
+					verbose: true,                // Debug output.
 					
 				},
 				
@@ -107,9 +107,9 @@ module.exports = function(grunt) {
 		 * @see https://github.com/gruntjs/grunt-contrib-watch
 		 */
 		
-		watch : {
+		watch: {
 			
-			files : [
+			files: [
 				
 				'<%= jshint.init %>',
 				'./files/scripts/**/*',
@@ -118,7 +118,7 @@ module.exports = function(grunt) {
 				
 			],
 			
-			tasks : ['default'],
+			tasks: ['default'],
 			
 		},
 		
@@ -131,15 +131,15 @@ module.exports = function(grunt) {
 		 * @see http://www.jshint.com/docs/
 		 */
 		
-		jshint : {
+		jshint: {
 			
-			options : {
+			options: {
 				
-				jshintrc : '.jshintrc', // Defined options and globals.
+				jshintrc: '.jshintrc', // Defined options and globals.
 				
 			},
 			
-			init : [
+			init: [
 				
 				'./Gruntfile.js',
 				'./files/scripts/<%= pkg.name %>.*.js',
@@ -156,17 +156,17 @@ module.exports = function(grunt) {
 		 * @see https://github.com/onehealth/grunt-env
 		 */
 		
-		env : {
+		env: {
 			
-			dev : {
+			dev: {
 				
-				NODE_ENV : 'DEVELOPMENT',
+				NODE_ENV: 'DEVELOPMENT',
 				
 			},
 			
-			prod : {
+			prod: {
 				
-				NODE_ENV : 'PRODUCTION',
+				NODE_ENV: 'PRODUCTION',
 				
 			},
 			
@@ -180,23 +180,24 @@ module.exports = function(grunt) {
 		 * @see https://github.com/gruntjs/grunt-contrib-clean
 		 */
 		
-		clean : {
+		clean: {
 			
-			options : {
+			options: {
 				
-				force : true, // Allows for deletion of folders outside current working dir (CWD). Use with caution.
+				force: true, // Allows for deletion of folders outside current working dir (CWD). Use with caution.
 				
 			},
 			
-			dev : [
+			dev: [
 				
 				'../dev/**/*',
 				
 			],
 			
-			prod : [
+			prod: [
 				
 				'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*',
+				'../index.html',
 				
 			],
 			
@@ -211,26 +212,29 @@ module.exports = function(grunt) {
 		 * @see http://lisperator.net/uglifyjs/
 		 */
 		
-		uglify : {
+		uglify: {
 			
-			prod : {
+			prod: {
 				
-				options : {
+				options: {
 					
-					banner : '<%= banner.short %>',
+					banner: '<%= banner.short %>',
 					
 				},
 				
-				files : {
+				files: {
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js' : [
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/scripts/<%= pkg.name %>.min.js': [
 						'./files/scripts/fastclick.js',
 						'./files/scripts/jquery.js',
 						'./files/scripts/jquery.*.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
 						'./files/scripts/<%= pkg.name %>.init.js',
+						'./files/scripts/development.js', // Bypass jshint, for quick and dirty JS tests.
 					],
+					
+					// Optionally, add more generated files here ...
 					
 				},
 				
@@ -247,46 +251,46 @@ module.exports = function(grunt) {
 		 * @see http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#output_style
 		 */
 		
-		sass : {
+		sass: {
 			
-			options : {
+			options: {
 				
-				noCache : true,  // Don't cache to sassc files.
-				precision : 14, // How many digits of precision to use when outputting decimal numbers.
-				sourcemap : 'none', // Generate CSS source maps?
+				noCache: true,     // Don't cache to sassc files.
+				precision: 14,     // How many digits of precision to use when outputting decimal numbers.
+				sourcemap: 'none', // Generate CSS source maps?
 				
 			},
 			
-			dev : {
+			dev: {
 				
-				options : {
+				options: {
 					
-					banner : '<%= banner.long %>',
-					style : 'expanded', // Output style. Can be nested, compact, compressed, expanded.
+					banner: '<%= banner.long %>',
+					style: 'expanded', // Output style. Can be nested, compact, compressed, expanded.
 					
 				},
 				
-				files : {
+				files: {
 					
-					'../dev/styles/<%= pkg.name %>.css' : './files/styles/<%= pkg.name %>.scss',
-					'../dev/styles/development.css' : './files/styles/development.scss',
+					'../dev/styles/<%= pkg.name %>.css': './files/styles/<%= pkg.name %>.scss',
+					'../dev/styles/development.css': './files/styles/development.scss',
 					
 				},
 				
 			},
 			
-			prod : {
+			prod: {
 				
-				options : {
+				options: {
 					
-					banner : '<%= banner.short %>',
-					style : 'compressed',
+					banner: '<%= banner.short %>',
+					style: 'compressed',
 					
 				},
 				
-				files : {
+				files: {
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css' : './files/styles/<%= pkg.name %>.scss',
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css': './files/styles/<%= pkg.name %>.scss',
 					
 				},
 				
@@ -304,38 +308,40 @@ module.exports = function(grunt) {
 		 * @see http://gruntjs.com/configuring-tasks#building-the-files-object-dynamically
 		 */
 		
-		preprocess : {
+		preprocess: {
 			
-			options : {
+			options: {
 				
-				context : {
+				context: {
 					
-					title : '<%= pkg.title %>',
-					description : '<%= pkg.description %>',
-					name : '<%= pkg.name %>',
-					version : '<%= pkg.version %>',
-					homepage : '<%= pkg.homepage %>',
-					production : '<%= pkg.production %>',
-					now : '<%= now %>',
-					ver : '<%= ver %>',
+					description: '<%= pkg.description %>',
+					homepage: '<%= pkg.homepage %>',
+					license: '<%= _.pluck(pkg.licenses, "type").join(", ") %>',
+					name: '<%= pkg.name %>',
+					now: '<%= now %>',
+					production: '<%= pkg.production %>',
+					title: '<%= pkg.title %>',
+					ver: '<%= ver %>',
+					version: '<%= pkg.version %>',
 					
 				},
 				
 			},
 			
-			dev : {
+			dev: {
 				
 				files: [
 					
 					{
 						
-						expand : true,
-						cwd : './files/templates/',
-						src : [
-							'**/*.*', // Greedy!
+						expand: true,
+						cwd: './files/templates/',
+						src: [
+							'**/*.html',
+							'!includes/**/*',
 							'!latest.html',
 						],
-						dest : '../dev/',
+						dest: '../dev/',
 						
 					},
 					
@@ -343,23 +349,23 @@ module.exports = function(grunt) {
 				
 			},
 			
-			prod : {
+			prod: {
 				
 				files: [
 					
 					{
 						
-						expand : true,
-						cwd : './files/templates/',
-						src : [
+						expand: true,
+						cwd: './files/templates/',
+						src: [
 							'index.html',
 						],
-						dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						dest: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 						
 					}, {
 						
-						src : './files/templates/latest.html',
-						dest : '../prod/index.html',
+						src: './files/templates/latest.html',
+						dest: '../prod/index.html',
 						
 					},
 					
@@ -378,21 +384,22 @@ module.exports = function(grunt) {
 		 * @see http://gruntjs.com/configuring-tasks#globbing-patterns
 		 */
 		
-		copy : {
+		copy: {
 			
-			dev : {
+			dev: {
 				
-				files : [
+				files: [
 					
 					{
 						
-						expand : true,
-						cwd : './files/',
-						src : [
-							'images/**/*',
+						expand: true,
+						cwd: './files/',
+						src: [
+							'images/**/*.*', // Could also use: `*.{gif,png,svg}`
 							'scripts/**/*',
+							'!**/source/**',
 						],
-						dest : '../dev/',
+						dest: '../dev/',
 						
 					},
 					
@@ -400,19 +407,20 @@ module.exports = function(grunt) {
 				
 			},
 			
-			prod : {
+			prod: {
 				
-				files : [
+				files: [
 					
 					{
 						
-						expand : true,
-						cwd : './files/',
-						src : [
-							'images/**/*',
-							'!images/junk/**',
+						expand: true,
+						cwd: './files/',
+						src: [
+							'images/**/*.*',
+							'!**/source/**',
+							'!**/junk/**',
 						],
-						dest : '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						dest: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
 						
 					}, {
 						
@@ -421,6 +429,8 @@ module.exports = function(grunt) {
 						dest: '../index.html',
 						
 					},
+					
+					// Optionally, add more generated files here ...
 					
 				],
 				

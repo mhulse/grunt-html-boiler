@@ -35,9 +35,10 @@
     "grunt-preprocess": "~4"
   },
   "scripts": {
+    "bower": "grunt bower",
     "dev": "grunt",
+    "grunt": "grunt",
     "prod": "grunt prod",
-    "watch": "grunt watch",
-    "bower": "grunt bower"
+    "watch": "grunt watch"
   }
 }
