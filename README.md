@@ -6,7 +6,7 @@
 
 ## About
 
-This repo is just an example of my prefered Grunt-powered asset/theme files workflow.
+This repo is just an example of my preferred Grunt-powered asset/theme files workflow.
 
 It’s my preference to separate asset/theme files from server-side code/templates. A few advantages to this type of setup is:
 
@@ -15,14 +15,10 @@ It’s my preference to separate asset/theme files from server-side code/templat
 
 This repo also serves as an example of how one can use Grunt (via [`grunt-env`](https://github.com/jsoverson/grunt-env/) and [`grunt-preprocess`](https://github.com/jsoverson/grunt-preprocess/) tasks) to build a “development” and “production” `index.html`, and other, file(s).
 
-## Demo
+## Demos
 
-Click or scan:
-
-DEVELOPMENT | PRODUCTION
-:-: | :-:
-[![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/grunt-html-boiler/dev/&chs=240x240)](http://mhulse.github.io/grunt-html-boiler/dev/) | [![qr code](http://chart.apis.google.com/chart?cht=qr&chl=http://mhulse.github.io/grunt-html-boiler/prod/&chs=240x240)](http://mhulse.github.io/grunt-html-boiler/prod/)
-`$ grunt` or `$ npm run dev` | `$ grunt prod` or `$ npm run prod`
+* [Development build](http://mhulse.github.io/grunt-html-boiler/dev/) (non-minified/uglified, etc.)
+* [Production build](http://mhulse.github.io/grunt-html-boiler/prod/)
 
 ## Development
 
@@ -34,16 +30,16 @@ Assuming you already have [Grunt.js](http://gruntjs.com/) installed …
 
 Here’s a few ways to install this code:
 
-1. Download as a [`zip`](https://github.com/mhulse/grunt-html-boiler/archive/gh-pages.zip).
+1. Download as a [`zip`](../../archive/gh-pages.zip).
 1. Clone it: `$ git clone https://github.com/mhulse/grunt-html-boiler.git`.
 1. Fork it and clone: `$ git clone git@github.com:USERNAME/grunt-html-boiler.git`.
 
 ### Setup dependencies
 
-Navigate to the local repo’s `source/` directory:
+Navigate to the local repo’s `build/` directory:
 
 ```bash
-$ cd grunt-html-boiler/source/
+$ cd grunt-html-boiler/build/
 ```
 
 Install Grunt tasks:
@@ -60,13 +56,13 @@ $ grunt bower
 $ npm run bower
 ```
 
-… this will install plugins (as defined in `source/bower.json`) into the `source/files/plugins/` directory; in order to keep things tidy, I’ve created these symlinks:
+… this will install plugins (as defined in `build/bower.json`) into the `build/files/plugins/` directory; in order to keep things tidy, I’ve created these symlinks:
 
 Plugin | Destination
 :-- | :--
-`source/plugins/fastclick/fastclick.js` | `source/scripts/fastclick.js`
-`source/plugins/jquery/jquery.js` | `source/scripts/jquery.js`
-`source/plugins/normalize-css/normalize.css` | `source/styles/partials/_normalize.scss`
+`build/plugins/fastclick/fastclick.js` | `build/scripts/fastclick.js`
+`build/plugins/jquery/jquery.js` | `build/scripts/jquery.js`
+`build/plugins/normalize-css/normalize.css` | `build/styles/partials/_normalize.scss`
 
 ### Development preview
 
@@ -86,11 +82,13 @@ Visit the development build:
 
 **Note:** The above URL will depend upon your local development environment; for previewing my projects I use [XAMPP](http://www.apachefriends.org/index.html).
 
+Alternatively, you could setup [`grunt-contrib-connect`](https://github.com/gruntjs/grunt-contrib-connect) ([#37](../../issues/37)).
+
 ### Edit
 
-At this point, you can modify any of the files, especially the ones found in the `source/files/` directory.
+At this point, you can modify any of the files, especially the ones found in the `build/files/` directory.
 
-Modify `source/package.json` to meet the needs of your repo/project.
+Modify `build/package.json` to meet the needs of your repo/project.
 
 **Note:** The `production` key’s value is the URI where the final production files will live.
 
@@ -105,11 +103,11 @@ $ npm run watch
 … the `watch` command will run a development build any time these directories/file(s) change:
 
 ```text
-source/Gruntfile.js
-source/files/scripts/<%= pkg.ns %>.*.js
-source/files/scripts/**/*
-source/files/styles/**/*
-source/files/templates/**/*
+build/Gruntfile.js
+build/files/scripts/<%= pkg.ns %>.*.js
+build/files/scripts/**/*
+build/files/styles/**/*
+build/files/templates/**/*
 ```
 
 ### Production build
@@ -161,7 +159,7 @@ function theme_build() {
 
 1. This project generates two groups of Grunt-built files: 1) Un-minified/uglified, and 2) minified/uglified. I prefer having my development- and production-generated files separately built.
 
-1. This project puts the “build” code, or “source”, a level deep off the root. In my opinion, having the source files off the root and in a sub-directory allows for the overall setup to be more organized and streamlined.
+1. This project puts the “build” code a level deep off the root. In my opinion, having the source files out of the root and in a sub-directory allows for the overall setup to be more organized and streamlined.
 
 ## Links
 
@@ -189,13 +187,13 @@ Please read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Feedback
 
-[Bugs? Constructive feedback? Questions?](https://github.com/mhulse/grunt-html-boiler/issues/new?title=Your%20code%20sucks!&body=Here%27s%20why%3A%20)
+[Bugs? Constructive feedback? Questions?](../../issues/new?title=Your%20code%20sucks!&body=Here%27s%20why%3A%20)
 
 ---
 
 #### LEGAL
 
-Copyright © 2014 [Micky Hulse](http://mky.io)
+Copyright © 2016 [Micky Hulse](http://mky.io)
 
 Licensed under the Apache License, Version 2.0 (the “License”); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
 
