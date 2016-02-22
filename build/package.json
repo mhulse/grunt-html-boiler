@@ -20,19 +20,19 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "dependencies": {
+  "devDependencies": {
     "grunt": "~0",
     "grunt-cli": "~0",
     "grunt-bower-task": "~0",
     "grunt-contrib-clean": "~0",
-    "grunt-contrib-concat": "~0",
+    "grunt-contrib-concat": "~1",
     "grunt-contrib-copy": "~0",
-    "grunt-contrib-jshint": "~0",
+    "grunt-contrib-jshint": "~1",
     "grunt-contrib-sass": "~0",
     "grunt-contrib-uglify": "~0",
     "grunt-contrib-watch": "~0",
     "grunt-env": "~0",
-    "grunt-preprocess": "~4"
+    "grunt-preprocess": "~5"
   },
   "scripts": {
     "bower": "grunt bower",
