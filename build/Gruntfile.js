@@ -53,7 +53,7 @@ module.exports = function(grunt) {
 			         '<%= pkg.licenses ? " * @license Released under the " + _.pluck(pkg.licenses, "type").join(", ") + ".\\n" : "" %>' +
 			         '<%= pkg.version ? " * @version " + pkg.version + "\\n" : "" %>' +
 			         ' * @date <%= grunt.template.today("yyyy/mm/dd") %>\n' +
-			         ' */\n\n',
+			         ' */\n\n'
 			
 		},
 		
@@ -90,11 +90,11 @@ module.exports = function(grunt) {
 					targetDir: './files/plugins', // A directory where you want to keep your Bower packages.
 					cleanup: true,                // Will clean target and bower directories.
 					layout: 'byComponent',        // Folder structure type.
-					verbose: true,                // Debug output.
+					verbose: true                 // Debug output.
 					
-				},
+				}
 				
-			},
+			}
 			
 		},
 		
@@ -114,11 +114,11 @@ module.exports = function(grunt) {
 				'<%= jshint.init %>',
 				'./files/scripts/**/*',
 				'./files/styles/**/*',
-				'./files/templates/**/*',
+				'./files/templates/**/*'
 				
 			],
 			
-			tasks: ['default'],
+			tasks: ['default']
 			
 		},
 		
@@ -135,16 +135,16 @@ module.exports = function(grunt) {
 			
 			options: {
 				
-				jshintrc: '.jshintrc', // Defined options and globals.
+				jshintrc: '.jshintrc' // Defined options and globals.
 				
 			},
 			
 			init: [
 				
 				'./Gruntfile.js',
-				'./files/scripts/<%= pkg.name %>.*.js',
+				'./files/scripts/<%= pkg.name %>.*.js'
 				
-			],
+			]
 			
 		},
 		
@@ -160,15 +160,15 @@ module.exports = function(grunt) {
 			
 			dev: {
 				
-				NODE_ENV: 'DEVELOPMENT',
+				NODE_ENV: 'DEVELOPMENT'
 				
 			},
 			
 			prod: {
 				
-				NODE_ENV: 'PRODUCTION',
+				NODE_ENV: 'PRODUCTION'
 				
-			},
+			}
 			
 		},
 		
@@ -184,22 +184,22 @@ module.exports = function(grunt) {
 			
 			options: {
 				
-				force: true, // Allows for deletion of folders outside current working dir (CWD). Use with caution.
+				force: true // Allows for deletion of folders outside current working dir (CWD). Use with caution.
 				
 			},
 			
 			dev: [
 				
-				'../dev/**/*',
+				'../dev/**/*'
 				
 			],
 			
 			prod: [
 				
 				'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/**/*',
-				'../index.html',
+				'../index.html'
 				
-			],
+			]
 			
 		},
 		
@@ -218,7 +218,7 @@ module.exports = function(grunt) {
 				
 				options: {
 					
-					banner: '<%= banner.short %>',
+					banner: '<%= banner.short %>'
 					
 				},
 				
@@ -230,14 +230,14 @@ module.exports = function(grunt) {
 						'./files/scripts/jquery.*.js',
 						'./files/scripts/<%= pkg.name %>.js',
 						'./files/scripts/<%= pkg.name %>.mod.*.js',
-						'./files/scripts/<%= pkg.name %>.init.js',
-					],
+						'./files/scripts/<%= pkg.name %>.init.js'
+					]
 					
 					// Optionally, add more generated files here ...
 					
-				},
+				}
 				
-			},
+			}
 			
 		},
 		
@@ -254,9 +254,9 @@ module.exports = function(grunt) {
 			
 			options: {
 				
-				noCache: true,     // Don't cache to sassc files.
-				precision: 14,     // How many digits of precision to use when outputting decimal numbers.
-				sourcemap: 'none', // Generate CSS source maps?
+				noCache: true,    // Don't cache to sassc files.
+				precision: 14,    // How many digits of precision to use when outputting decimal numbers.
+				sourcemap: 'none' // Generate CSS source maps?
 				
 			},
 			
@@ -264,17 +264,17 @@ module.exports = function(grunt) {
 				
 				options: {
 					
-					banner: '<%= banner.long %>',
-					style: 'expanded', // Output style. Can be nested, compact, compressed, expanded.
+					//banner: '<%= banner.long %>',
+					style: 'expanded' // Output style. Can be nested, compact, compressed, expanded.
 					
 				},
 				
 				files: {
 					
 					'../dev/styles/<%= pkg.name %>.css': './files/styles/<%= pkg.name %>.scss',
-					'../dev/styles/development.css': './files/styles/development.scss',
+					'../dev/styles/development.css': './files/styles/development.scss'
 					
-				},
+				}
 				
 			},
 			
@@ -282,18 +282,18 @@ module.exports = function(grunt) {
 				
 				options: {
 					
-					banner: '<%= banner.short %>',
-					style: 'compressed',
+					//banner: '<%= banner.short %>',
+					style: 'compressed'
 					
 				},
 				
 				files: {
 					
-					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css': './files/styles/<%= pkg.name %>.scss',
+					'../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/styles/<%= pkg.name %>.min.css': './files/styles/<%= pkg.name %>.scss'
 					
-				},
+				}
 				
-			},
+			}
 			
 		},
 		
@@ -321,9 +321,9 @@ module.exports = function(grunt) {
 					production: '<%= pkg.production %>',
 					title: '<%= pkg.title %>',
 					ver: '<%= ver %>',
-					version: '<%= pkg.version %>',
+					version: '<%= pkg.version %>'
 					
-				},
+				}
 				
 			},
 			
@@ -338,13 +338,13 @@ module.exports = function(grunt) {
 						src: [
 							'**/*.html',
 							'!includes/**/*',
-							'!latest.html',
+							'!latest.html'
 						],
-						dest: '../dev/',
+						dest: '../dev/'
 						
-					},
+					}
 					
-				],
+				]
 				
 			},
 			
@@ -357,20 +357,20 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: './files/templates/',
 						src: [
-							'index.html',
+							'index.html'
 						],
-						dest: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						dest: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}, {
 						
 						src: './files/templates/latest.html',
-						dest: '../prod/index.html',
+						dest: '../prod/index.html'
 						
-					},
+					}
 					
-				],
+				]
 				
-			},
+			}
 			
 		},
 		
@@ -396,13 +396,13 @@ module.exports = function(grunt) {
 						src: [
 							'images/**/*.*', // Could also use: `*.{gif,png,svg}`
 							'scripts/**/*',
-							'!**/source/**',
+							'!**/source/**'
 						],
-						dest: '../dev/',
+						dest: '../dev/'
 						
-					},
+					}
 					
-				],
+				]
 				
 			},
 			
@@ -417,25 +417,25 @@ module.exports = function(grunt) {
 						src: [
 							'images/**/*.*',
 							'!**/source/**',
-							'!**/junk/**',
+							'!**/junk/**'
 						],
-						dest: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/',
+						dest: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/'
 						
 					}, {
 						
 						// COPY INDEX TO ROOT:
 						src: '../prod/<%= pkg.version %>/<%= now %>/<%= ver %>/index.html',
-						dest: '../index.html',
+						dest: '../index.html'
 						
-					},
+					}
 					
 					// Optionally, add more generated files here ...
 					
-				],
+				]
 				
-			},
+			}
 			
-		},
+		}
 		
 	});
 	
@@ -470,12 +470,12 @@ module.exports = function(grunt) {
 	
 	//----------------------------------
 	
-	grunt.registerTask('init', ['jshint',]);
+	grunt.registerTask('init', ['jshint']);
 	
-	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev',]);
+	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'sass:dev', 'preprocess:dev', 'copy:dev']);
 	
-	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod',]);
+	grunt.registerTask('prod', ['init', 'dev', 'env:prod', 'clean:prod', 'sass:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
 	
-	grunt.registerTask('default', ['dev',]);
+	grunt.registerTask('default', ['dev']);
 	
 };
